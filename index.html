@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Animation & Multimedia Club</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f5ff;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            background: #24104f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: #d8b4fe;
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 80vh;
+            padding: 70px 30px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #24104f, #6d28d9);
+            color: white;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-buttons a {
+            display: inline-block;
+            padding: 13px 22px;
+            margin-right: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .primary-btn {
+            background: #fbbf24;
+            color: #24104f;
+        }
+
+        .secondary-btn {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .hero-image {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        /* General Sections */
+        section {
+            padding: 70px 30px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #24104f;
+            font-size: 34px;
+            margin-bottom: 45px;
+        }
+
+        /* Feature Cards */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #24104f;
+            margin-bottom: 10px;
+        }
+
+        /* Projects */
+        .projects-section {
+            background: white;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #f7f5ff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            color: #24104f;
+            margin-bottom: 8px;
+        }
+
+        /* Call to Action */
+        .cta {
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: #24104f;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 28px;
+            background: #24104f;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #24104f;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #24104f;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .features,
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons a {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">🎬 Animation and Multimedia Club</a>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="about.html">About</a></li>
+                <li><a href="animation.html">Animation</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="galleryn.html">Gallery</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="joinus.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+
+            <div>
+                <h1>Animate. Create. Inspire.</h1>
+
+                <p>
+                    Welcome to Animation & Multimedia Club
+                    where creativity meets technology. Explore animation,
+                    video editing, digital art and multimedia production.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="animation.html" class="primary-btn">
+                        Explore Animation
+                    </a>
+
+                    <a href="about.html" class="secondary-btn">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <img class="hero-image"
+                    src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=80"
+                    alt="Creative multimedia workspace">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- What We Do -->
+    <section>
+        <div class="container">
+
+            <h2 class="section-title">What We Do</h2>
+
+            <div class="features">
+
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Animation</h3>
+                    <p>
+                        Explore 2D animation, character design,
+                        motion graphics and visual storytelling.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎥</div>
+                    <h3>Video Editing</h3>
+                    <p>
+                        Learn video editing techniques through
+                        tutorials and practical multimedia projects.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💡</div>
+                    <h3>Creative Projects</h3>
+                    <p>
+                        Turn creative ideas into digital projects
+                        while working with other club members.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="projects-section">
+        <div class="container">
+
+            <h2 class="section-title">Featured Activities</h2>
+
+            <div class="projects">
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=700&q=80"
+                        alt="Film production">
+                    <div class="project-content">
+                        <h3>Multimedia Production</h3>
+                        <p>
+                            Work together to create creative multimedia content.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=700&q=80"
+                        alt="Creative digital project">
+                    <div class="project-content">
+                        <h3>Creative Projects</h3>
+                        <p>
+                            Showcase student creativity through animation,
+                            digital art and multimedia.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1744948961024-66baaafbb5dc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Video editing">
+                    <div class="project-content">
+                        <h3>Editing Workshops</h3>
+                        <p>
+                            Improve your video editing and multimedia
+                            production skills.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Create?</h2>
+
+            <p>
+                Discover your creativity and build something amazing with AM Club.
+            </p>
+
+            <a href="joinus.html" class="cta-button">
+                Join Us
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Animation & Multimedia Club</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("navLinks");
+            menu.classList.toggle("show");
+        }
+    </script>
+
+</body>
+
+</html>

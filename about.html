@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | AM Club </title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f5ff;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            background: #24104f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover,
+        .nav-links .active {
+            color: #d8b4fe;
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #24104f, #6d28d9);
+            color: white;
+            text-align: center;
+            padding: 80px 30px;
+        }
+
+        .page-header h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .page-header p {
+            font-size: 19px;
+        }
+
+        /* General */
+        section {
+            padding: 70px 30px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            color: #24104f;
+            font-size: 34px;
+            margin-bottom: 25px;
+        }
+
+        /* Introduction */
+        .intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .intro-text p {
+            margin-bottom: 18px;
+        }
+
+        .intro-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .intro-icon {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .intro-card h2 {
+            color: #24104f;
+            margin-bottom: 15px;
+        }
+
+        /* Mission and Vision */
+        .white-section {
+            background: white;
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .info-card {
+            background: #f7f5ff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .info-card h3 {
+            color: #24104f;
+            margin-bottom: 12px;
+        }
+
+        /* Benefits */
+        .benefits {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .benefits ul {
+            padding-left: 25px;
+        }
+
+        .benefits li {
+            margin-bottom: 12px;
+        }
+
+        /* Activities */
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .activity {
+            background: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+            transition: 0.3s;
+        }
+
+        .activity:hover {
+            transform: translateY(-7px);
+        }
+
+        .activity-icon {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+        .activity h3 {
+            color: #24104f;
+            margin-bottom: 8px;
+        }
+
+        /* CTA */
+        .cta {
+            background: #24104f;
+            color: white;
+            text-align: center;
+            border-radius: 15px;
+            padding: 45px 25px;
+        }
+
+        .cta h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 13px 25px;
+            background: #fbbf24;
+            color: #24104f;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 70px;
+            background: #24104f;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #24104f;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .page-header h1 {
+                font-size: 38px;
+            }
+
+            .intro,
+            .two-columns {
+                grid-template-columns: 1fr;
+            }
+
+            .activities {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .activities {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 50px 20px;
+            }
+
+            .hero-buttons a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">🎬 Animation and Multimedia Club</a>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="about.html">About</a></li>
+                <li><a href="animation.html">Animation</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="galleryn.html">Gallery</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="joinus.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About Animation and Multinedia Club</h1>
+            <p>
+                Creativity, technology and multimedia brought together.
+            </p>
+        </div>
+    </section>
+
+    <!-- Who We Are -->
+    <section>
+        <div class="container">
+
+            <div class="intro">
+
+                <div class="intro-text">
+                    <h2 class="section-title">Who We Are</h2>
+
+                    <p>
+                        Animation & Multimedia Club for
+                        students who are interested in animation, video
+                        editing, digital art and multimedia production.
+                    </p>
+
+                    <p>
+                        The club provides opportunities for members to
+                        develop creative and technical skills through
+                        projects, workshops, competitions and collaborative
+                        activities.
+                    </p>
+
+                    <p>
+                        We believe multimedia is a powerful way to
+                        communicate ideas, tell stories and express creativity.
+                    </p>
+                </div>
+
+                <div class="intro-card">
+                    <div class="intro-icon">🎬</div>
+
+                    <h2>Our Passion</h2>
+
+                    <p>
+                        Bringing creative ideas to life through animation,
+                        video and digital media.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission and Vision -->
+    <section class="white-section">
+        <div class="container">
+
+            <h2 class="section-title">Our Mission & Vision</h2>
+
+            <div class="two-columns">
+
+                <div class="info-card">
+                    <h3>🎯 Our Mission</h3>
+
+                    <p>
+                        To provide a creative environment where students
+                        can improve their animation and multimedia skills,
+                        collaborate on projects and share their ideas.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>🚀 Our Vision</h3>
+
+                    <p>
+                        To build an active and creative multimedia community
+                        where students can explore new technologies and
+                        produce meaningful digital content.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section>
+        <div class="container">
+
+            <h2 class="section-title" style="text-align:center;">
+                What Members Can Gain
+            </h2>
+
+            <div class="benefits">
+
+                <ul>
+                    <li>Improve animation and digital art skills.</li>
+                    <li>Learn video editing and multimedia production.</li>
+                    <li>Participate in creative projects and workshops.</li>
+                    <li>Develop teamwork and communication skills.</li>
+                    <li>Share creative ideas with other students.</li>
+                    <li>Showcase multimedia projects and achievements.</li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+        <div class="container">
+
+            <div class="cta">
+
+                <h2>Be Part of the Creative Community</h2>
+
+                <p>
+                    Explore animation, video editing, digital art
+                    and multimedia production with AnimateX.
+                </p>
+
+                <a href="joinus.html" class="cta-button">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Animation & Multimedia Club</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("navLinks");
+            menu.classList.toggle("show");
+        }
+    </script>
+
+</body>
+
+</html>

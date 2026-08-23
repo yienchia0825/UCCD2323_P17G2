@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events - Animation & Multimedia Club</title>
+
+    <link rel="stylesheet" href="css/style(event).css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Animation & Multimedia Club</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="animation.html">Animation</a>
+        <a href="multimedia.html">Multimedia</a>
+        <a href="tutorials.html">Tutorials</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="event.html">Events</a>
+        <a href="joinus.html">Join Us</a>
+    </nav>
+
+    <main>
+
+        <h2>Upcoming Events</h2>
+
+        <p class="introduction">
+            Discover exciting workshops, competitions and activities organised by the Animation & Multimedia Club.
+        </p>
+
+        <section class="events">
+
+            <article class="event-card">
+
+                <img src="images/images(event)/animation.jpeg" alt="Animation Projects Showcase" width="380" height="220">
+
+                <h3>Animation Projects Showcase</h3>
+
+                <p><strong>Date:</strong> 5 September 2026 </p>
+                <p><strong>Time:</strong> 2:00 PM - 5:00 PM </p>
+                <p><strong>Venue:</strong> Computer Lab 1 </p>
+
+                <p>
+                    Explore creative animation projects produced by students and discover different techniques used in digital animation.
+                </p>
+
+                <button id="animationBtn">
+                    More Information
+                </button>
+            </article>
+
+
+            <article class="event-card">
+
+                <img src="images/images(event)/videoediting.jpeg" alt="Video Editing Tutorial Workshop" width="380" height="220">
+
+                <h3>Video Editing Tutorial Workshop</h3>
+
+                <p><strong>Date:</strong> 12 September 2026 </p>
+                <p><strong>Time:</strong> 10:00 AM - 1:00 PM </p>
+                <p><strong>Venue:</strong> Multimedia Lab </p>
+
+                <p>
+                    Learn basic video editing techniques including transitions, audio and visual effects.
+                </p>
+
+                <button id="videoBtn">
+                    More Information
+                </button>
+            </article>
+
+
+            <article class="event-card">
+
+                <img src="images/images(event)/multimedia.jpeg" alt="Multimedia Production Exhibition" width="380" height="220">
+
+                <h3>Multimedia Production Exhibition</h3>
+
+                <p><strong>Date:</strong> 20 September 2026 </p>
+                <p><strong>Time:</strong> 9:00 AM - 4:00 PM </p>
+                <p><strong>Venue:</strong> Main Hall </p>
+
+                <p>
+                    Explore creative multimedia productions including digital artwork, video, photography and interactive media.
+                </p>
+
+                <button id="multimediaBtn">
+                    More Information
+                </button>
+            </article>
+
+        </section>
+
+        <div id="eventMessage">
+            Click "More Information" to view the selected event.
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Animation & Multimedia Club</p>
+    </footer>
+
+    <script>
+        var animationButton = document.getElementById("animationBtn");
+
+        var videoButton = document.getElementById("videoBtn");
+
+        var multimediaButton = document.getElementById("multimediaBtn");
+
+        var eventMessage = document.getElementById("eventMessage");
+
+
+        animationButton.addEventListener("click", function () {
+
+            eventMessage.innerHTML = "<h3>Animation Projects Showcase</h3>" + "<p>Explore creative animation projects and discover different techniques used in digital animation.</p>";
+
+        });
+
+
+        videoButton.addEventListener("click", function () {
+
+            eventMessage.innerHTML = "<h3>Video Editing Tutorial Workshop</h3>" + "<p>Learn basic video editing techniques including transitions, audio editing and visual effects.</p>";
+
+        });
+
+
+        multimediaButton.addEventListener("click", function () {
+
+            eventMessage.innerHTML = "<h3>Multimedia Production Exhibition</h3>" + "<p>Explore creative multimedia productions including digital artwork, video and interactive media.</p>";
+
+        });
+
+    </script>
+
+</body>
+
+</html>
