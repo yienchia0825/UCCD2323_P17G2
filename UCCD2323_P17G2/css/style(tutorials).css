@@ -1,0 +1,1280 @@
+/* =====================================================
+   GALLERY HEADER
+===================================================== */
+
+.gallery-header {
+    padding: 70px 20px 80px;
+    text-align: center;
+    background: linear-gradient(135deg,
+            #f8f4ff,
+            #eee5ff,
+            #ffffff);
+}
+
+.gallery-header-image {
+    width: 700px;
+    max-width: 100%;
+    height: 400px;
+    margin: 0 auto 40px;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(41, 21, 101, 0.25);
+}
+
+.gallery-header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-header-image:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-header .section-label {
+    display: inline-block;
+    padding: 8px 18px;
+    margin-bottom: 15px;
+
+    background-color: #291565;
+    color: white;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.gallery-header h1 {
+    color: #291565;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.gallery-description {
+    max-width: 750px;
+    margin: 0 auto 30px;
+    color: #555;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.gallery-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.gallery-categories span {
+    padding: 10px 18px;
+    background-color: white;
+    color: #291565;
+    border: 2px solid #e5d8fa;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(41, 21, 101, 0.08);
+    transition: 0.3s;
+}
+
+.gallery-categories span:hover {
+    background-color: #291565;
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(41, 21, 101, 0.2);
+}
+
+/* =====================================================
+   GALLERY SECTION
+===================================================== */
+
+.gallery-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.gallery-heading {
+    margin-bottom: 50px;
+}
+
+.gallery-heading .section-label {
+    color: #6a35a8;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.gallery-heading h2 {
+    color: #291565;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.gallery-heading p {
+    color: #666;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+/* =====================================================
+   GALLERY CARD
+===================================================== */
+
+.gallery-card {
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(41, 21, 101, 0.12);
+    transition: 0.35s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(41, 21, 101, 0.2);
+}
+
+/* =====================================================
+   GALLERY IMAGE
+===================================================== */
+
+.gallery-image {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-card:hover .gallery-image img {
+    transform: scale(1.08);
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* =====================================================
+   GALLERY INFO
+===================================================== */
+
+.gallery-info {
+    padding: 25px;
+}
+
+
+.gallery-category {
+    color: #6a35a8;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+
+.gallery-info h3 {
+    color: #291565;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.gallery-info p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* =====================================================
+   JOIN SECTION
+===================================================== */
+
+.join-section {
+    position: relative;
+
+    margin: 20px auto 80px;
+
+    padding: 80px 20px;
+
+    max-width: 1200px;
+
+    background: linear-gradient(135deg,
+            #291565,
+            #5b2a91,
+            #8b5fc7);
+
+    border-radius: 25px;
+
+    color: white;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(41, 21, 101, 0.3);
+}
+
+
+/* Decorative Circle */
+
+.join-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+
+    top: -100px;
+    left: -80px;
+}
+
+
+/* Decorative Circle */
+
+.join-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+
+    bottom: -150px;
+    right: -100px;
+}
+
+
+/* Keep content above decorations */
+
+.join-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+
+.join-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+
+.join-section h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+
+.join-section p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+/* Join Button */
+
+.join-section .btn-primary {
+    padding: 13px 35px;
+
+    background-color: white;
+
+    color: #291565;
+
+    border: none;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.join-section .btn-primary:hover {
+    background-color: #f1e8ff;
+
+    color: #291565;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    padding: 50px 0 25px;
+
+    background-color: #291565;
+
+    color: white;
+}
+
+
+.footer h3 {
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+
+.footer p {
+    color: #ddd;
+}
+
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+
+.footer-links a {
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.footer-links a:hover {
+    color: #d9baff;
+}
+
+
+.footer hr {
+    margin: 30px 0 20px;
+
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.copyright {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #ccc;
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .gallery-header {
+        padding: 50px 15px 60px;
+    }
+
+
+    .gallery-header-image {
+        height: 280px;
+    }
+
+
+    .gallery-header h1 {
+        font-size: 36px;
+    }
+
+
+    .gallery-description {
+        font-size: 15px;
+    }
+
+
+    .gallery-heading h2 {
+        font-size: 30px;
+    }
+
+
+    .gallery-image {
+        height: 250px;
+    }
+
+
+    .join-section {
+        margin: 20px 15px 60px;
+        padding: 60px 20px;
+    }
+
+
+    .join-section h2 {
+        font-size: 30px;
+    }
+
+
+    .footer {
+        text-align: center;
+    }
+
+
+    .footer-links {
+        margin-top: 25px;
+    }
+
+}
+
+/* =====================================================
+   TUTORIAL HEADER
+===================================================== */
+
+.tutorial-header {
+    padding: 70px 20px 80px;
+    text-align: center;
+
+    background: linear-gradient(135deg,
+            #f8f4ff,
+            #eee5ff,
+            #ffffff);
+}
+
+
+/* Header Image */
+
+.tutorial-header-image {
+    width: 800px;
+    max-width: 100%;
+    height: 400px;
+
+    margin: 0 auto 40px;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(41, 21, 101, 0.25);
+}
+
+
+.tutorial-header-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+
+.tutorial-header-image:hover img {
+    transform: scale(1.07);
+}
+
+
+/* Header Label */
+
+.tutorial-header .section-label {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    margin-bottom: 15px;
+
+    background-color: #291565;
+
+    color: white;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+/* Heading */
+
+.tutorial-header h1 {
+    color: #291565;
+
+    font-size: 48px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+
+/* Description */
+
+.tutorial-header-description {
+    max-width: 750px;
+
+    margin: 0 auto 30px;
+
+    color: #555;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* Tutorial Tags */
+
+.tutorial-tags {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+.tutorial-tags span {
+    padding: 10px 18px;
+
+    background-color: white;
+
+    border: 2px solid #e5d8fa;
+
+    border-radius: 30px;
+
+    color: #291565;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 5px 15px rgba(41, 21, 101, 0.08);
+
+    transition: 0.3s;
+}
+
+
+.tutorial-tags span:hover {
+    background-color: #291565;
+
+    color: white;
+
+    transform: translateY(-4px);
+}
+
+
+
+/* =====================================================
+   TUTORIAL SECTION
+===================================================== */
+
+.tutorial-section {
+    padding: 80px 0;
+
+    background-color: white;
+}
+
+
+/* Section Heading */
+
+.tutorial-heading {
+    margin-bottom: 50px;
+}
+
+
+.tutorial-heading .section-label {
+    color: #6a35a8;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+.tutorial-heading h2 {
+    color: #291565;
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+
+.tutorial-heading p {
+    color: #666;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 1.7;
+}
+
+
+
+/* =====================================================
+   TUTORIAL CARD
+===================================================== */
+
+.tutorial-card {
+    display: flex;
+
+    height: 100%;
+
+    padding: 30px;
+
+    background-color: #ffffff;
+
+    border-radius: 20px;
+
+    border: 1px solid #eee5ff;
+
+    box-shadow:
+        0 8px 25px rgba(41, 21, 101, 0.1);
+
+    transition: 0.35s ease;
+}
+
+
+.tutorial-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(41, 21, 101, 0.18);
+}
+
+
+/* Icon */
+
+.tutorial-icon {
+    flex-shrink: 0;
+
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-right: 25px;
+
+    background: linear-gradient(135deg,
+            #291565,
+            #8b5fc7);
+
+    color: white;
+
+    border-radius: 18px;
+
+    font-size: 32px;
+}
+
+
+/* Content */
+
+.tutorial-content {
+    flex: 1;
+}
+
+
+.tutorial-category {
+    color: #6a35a8;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.tutorial-content h2 {
+    color: #291565;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    margin: 8px 0 10px;
+}
+
+
+.tutorial-content p {
+    color: #666;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+/* Link */
+
+.tutorial-link {
+    color: #6a35a8;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.tutorial-link:hover {
+    color: #291565;
+
+    padding-left: 5px;
+}
+
+
+
+/* =====================================================
+   FEATURED VIDEO
+===================================================== */
+
+.featured-tutorial {
+    padding: 90px 0;
+
+    background: linear-gradient(135deg,
+            #f8f4ff,
+            #ffffff);
+}
+
+
+/* Video */
+
+.video-container {
+    position: relative;
+
+    width: 100%;
+
+    padding-bottom: 56.25%;
+
+    height: 0;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 35px rgba(41, 21, 101, 0.2);
+}
+
+
+.video-container iframe {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+}
+
+
+/* Featured Text */
+
+.featured-tutorial .section-label {
+    display: inline-block;
+
+    color: #6a35a8;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+
+.featured-tutorial h2 {
+    color: #291565;
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+
+.featured-tutorial>.container p {
+    color: #666;
+
+    line-height: 1.8;
+}
+
+
+/* Points */
+
+.featured-points {
+    margin: 25px 0;
+}
+
+
+.featured-points p {
+    margin-bottom: 10px;
+
+    color: #444;
+}
+
+
+/* Button */
+
+.featured-tutorial .btn-primary {
+    padding: 12px 28px;
+
+    background-color: #291565;
+
+    border: none;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.featured-tutorial .btn-primary:hover {
+    background-color: #6a35a8;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(41, 21, 101, 0.25);
+}
+
+
+
+/* =====================================================
+   LEARNING SECTION
+===================================================== */
+
+.learning-section {
+    padding: 90px 0;
+
+    background-color: white;
+}
+
+
+.learning-section .section-label {
+    color: #6a35a8;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.learning-section h2 {
+    color: #291565;
+
+    font-size: 40px;
+
+    font-weight: 700;
+}
+
+
+.learning-intro {
+    max-width: 650px;
+
+    margin: 15px auto 0;
+
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+
+/* Step Card */
+
+.step-card {
+    position: relative;
+
+    height: 100%;
+
+    padding: 40px 25px;
+
+    background-color: #f8f4ff;
+
+    border-radius: 20px;
+
+    border: 1px solid #eee5ff;
+
+    transition: 0.3s;
+}
+
+
+.step-card:hover {
+    transform: translateY(-8px);
+
+    background-color: #291565;
+
+    color: white;
+
+    box-shadow:
+        0 15px 30px rgba(41, 21, 101, 0.2);
+}
+
+
+/* Number */
+
+.step-number {
+    position: absolute;
+
+    top: 15px;
+
+    right: 20px;
+
+    color: #d8c5f5;
+
+    font-size: 30px;
+
+    font-weight: 800;
+}
+
+
+/* Icon */
+
+.step-icon {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+
+.step-card h3 {
+    color: #291565;
+
+    font-size: 25px;
+
+    font-weight: 700;
+}
+
+
+.step-card:hover h3 {
+    color: white;
+}
+
+
+.step-card p {
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+.step-card:hover p {
+    color: #eee;
+}
+
+
+
+/* =====================================================
+   CTA SECTION
+===================================================== */
+
+.cta-section {
+    position: relative;
+
+    max-width: 1200px;
+
+    margin: 20px auto 80px;
+
+    padding: 80px 20px;
+
+    background: linear-gradient(135deg,
+            #291565,
+            #5b2a91,
+            #8b5fc7);
+
+    border-radius: 25px;
+
+    color: white;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 40px rgba(41, 21, 101, 0.3);
+}
+
+
+/* Decorative Circle */
+
+.cta-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    top: -100px;
+    left: -80px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+}
+
+
+.cta-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    right: -100px;
+    bottom: -150px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+}
+
+
+.cta-section .container {
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.cta-icon {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+
+.cta-section h2 {
+    font-size: 40px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+
+.cta-section p {
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+.cta-section .btn-primary {
+    padding: 13px 35px;
+
+    background-color: white;
+
+    color: #291565;
+
+    border: none;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.cta-section .btn-primary:hover {
+    background-color: #f1e8ff;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    padding: 50px 0 25px;
+
+    background-color: #291565;
+
+    color: white;
+}
+
+
+.footer h3 {
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+
+.footer p {
+    color: #ddd;
+}
+
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+
+.footer-links a {
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.footer-links a:hover {
+    color: #d9baff;
+}
+
+
+.footer hr {
+    margin: 30px 0 20px;
+
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.copyright {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #ccc;
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .tutorial-header {
+        padding: 50px 15px 60px;
+    }
+
+
+    .tutorial-header-image {
+        height: 280px;
+    }
+
+
+    .tutorial-header h1 {
+        font-size: 36px;
+    }
+
+
+    .tutorial-header-description {
+        font-size: 15px;
+    }
+
+
+    .tutorial-card {
+        display: block;
+
+        padding: 25px;
+    }
+
+
+    .tutorial-icon {
+        margin-bottom: 20px;
+    }
+
+
+    .featured-tutorial {
+        padding: 60px 15px;
+    }
+
+
+    .featured-tutorial h2 {
+        font-size: 30px;
+    }
+
+
+    .learning-section {
+        padding: 60px 15px;
+    }
+
+
+    .learning-section h2 {
+        font-size: 32px;
+    }
+
+
+    .cta-section {
+        margin: 20px 15px 60px;
+
+        padding: 60px 20px;
+    }
+
+
+    .cta-section h2 {
+        font-size: 30px;
+    }
+
+
+    .footer {
+        text-align: center;
+    }
+
+
+    .footer-links {
+        margin-top: 25px;
+    }
+
+}
